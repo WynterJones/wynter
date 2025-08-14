@@ -86,19 +86,27 @@ If \_ai directory doesn't exist, create it and show setup message.
 
 ## Technical Implementation
 
-1. Use file system commands to check for file existence
-2. Parse JSON files to extract relevant information
-3. Use Unicode box drawing characters for tables
-4. Calculate file sizes and modification times
-5. Provide helpful messages for missing files
+1. **Create _ai directory if it doesn't exist** using `mkdir -p _ai`
+2. Use file system commands to check for file existence
+3. Parse JSON files to extract relevant information
+4. Use Unicode box drawing characters for tables
+5. Calculate file sizes and modification times
+6. Provide helpful messages for missing files
+7. **Handle TTS file creation with error checking**
 
 ## TTS Notification
 
-Write a brief summary to `_ai/tts.txt`:
+**IMPORTANT**: Only create TTS notification if the analysis completes successfully.
 
-- If files exist: "Status shows [X] selected technologies"
-- If no selections: "No tech stack selected yet"
-- If errors: "Status check completed with issues"
+1. **Ensure _ai directory exists**: Create it if needed
+2. **Write brief summary to `_ai/tts.txt`** (only if no errors occurred):
+   - If files exist: "Status shows [X] selected technologies"
+   - If no selections: "No tech stack selected yet"  
+   - If errors: "Status check completed with issues"
+
+3. **Handle write failures gracefully**: If writing to `_ai/tts.txt` fails, continue without TTS notification
+
+**Note**: The TTS system will automatically skip if OpenAI API key is not set.
 
 ## Success Criteria
 
