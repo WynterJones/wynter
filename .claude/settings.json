@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": ".claude/commands/wynter_support/wynter-stop-hook.sh"
+            "command": ".claude/commands/wynter/stop-hook.sh"
           }
         ]
       }
