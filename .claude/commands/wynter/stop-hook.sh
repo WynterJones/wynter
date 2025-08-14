@@ -39,7 +39,7 @@ else
             SUMMARY="PRD generation completed successfully"
             ;;
         plan*)
-            SUMMARY="Sprint planning completed successfully"
+            SUMMARY="Flow planning completed successfully"
             ;;
         security*)
             SUMMARY="Security audit completed successfully"
@@ -49,6 +49,9 @@ else
             ;;
         enhance*)
             SUMMARY="Feature enhancement completed successfully"
+            ;;
+        status*)
+            SUMMARY="Project status displayed successfully"
             ;;
         help*)
             SUMMARY="Help documentation displayed successfully"

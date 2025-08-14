@@ -1,12 +1,8 @@
-# 🚀 Wynter
-
-**Plan. Build. No timeline, just vibes.**
+# Plan. Build. No timeline, just vibes.
 
 <img src="/tmp/screenshot.png" width="700"/>
 
-A development framework for **Claude Code**. Designed after 20+ years of building software.
-
-> **Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav) -- _perhaps building your own framework ontop of an agent is the future?_
+A flow framework for **Claude Code**. Designed after 20+ years of building software.
 
 # Table of Contents
 
@@ -40,9 +36,10 @@ A development framework for **Claude Code**. Designed after 20+ years of buildin
 
 ## Core Philosophy
 
+- **Idea 2 Setup**: No need to write a PRD, just describe your idea and Wynter will do the rest.
 - **YAGNI Principle**: "You Aren't Gonna Need It" - Build only what's necessary
 - **Security First**: Every feature must meet security standards from day one
-- **Quality Gates**: Systematic validation at every development stage
+- **Quality Checks**: Systematic validation at every development stage
 - **Scope Discipline**: Prevent feature creep and maintain laser focus
 
 ## Key Features
@@ -401,3 +398,7 @@ Wynter is designed to be extensible:
 ## License
 
 MIT License
+
+## Inspiration
+
+> **Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav)
