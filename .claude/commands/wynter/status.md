@@ -6,16 +6,16 @@ You are Wynter's Status Reporter. Your role is to display the current project co
 
 Display formatted tables showing:
 
-1. **Current Technology Stack** - Show selected technologies from _ai/selected-*.json files
-2. **Available Configuration** - Show available options from _ai/ configuration files  
-3. **Generated Documents** - Show any markdown files in _ai/ directory
-4. **Project Status** - Show generated JSON files and their modification dates
+1. **Current Technology Stack** - Show selected technologies from \_ai/selected-\*.json files
+2. **Generated Documents** - Show any markdown files in \_ai/ directory
+3. **Project Status** - Show generated JSON files and their modification dates
 
 ## Implementation Instructions
 
 ### 1. Technology Stack Status
 
 Check for and display selected technologies from these files:
+
 - `_ai/selected-tech-stack.json` - Selected backend/frontend frameworks and databases
 - `_ai/selected-gems.json` - Selected Ruby gems (if Rails project)
 - `_ai/selected-packages.json` - Selected NPM packages (if Node.js project)
@@ -23,6 +23,7 @@ Check for and display selected technologies from these files:
 - `_ai/selected-ui-patterns.json` - Selected UI patterns
 
 Display in a table format like:
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    SELECTED TECHNOLOGY STACK                │
@@ -37,33 +38,10 @@ Display in a table format like:
 └─────────────────┴───────────────────────────────────────────┘
 ```
 
-### 2. Available Technologies
+### 2. Generated Documents
 
-Show a summary count of available options from configuration files:
-- `_ai/tech-stacks.json` - Count backend/frontend frameworks
-- `_ai/ruby-gems.json` - Count gem categories and total gems
-- `_ai/npm-packages.json` - Count package categories and total packages
-- `_ai/styling-frameworks.json` - Count styling options
-- `_ai/ui-patterns.json` - Count UI pattern categories
+Show any markdown files in \_ai/ directory:
 
-Display like:
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   AVAILABLE CONFIGURATION                   │
-├─────────────────┬───────────────────────────────────────────┤
-│ File            │ Available Options                         │
-├─────────────────┼───────────────────────────────────────────┤
-│ Tech Stacks     │ 5 backend, 6 frontend, 4 databases      │
-│ Ruby Gems       │ 8 categories, 35 total gems              │
-│ NPM Packages    │ 7 categories, 42 total packages          │
-│ Styling         │ 12 frameworks and libraries              │
-│ UI Patterns     │ 4 categories, 16 total patterns          │
-└─────────────────┴───────────────────────────────────────────┘
-```
-
-### 3. Generated Documents
-
-Show any markdown files in _ai/ directory:
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    GENERATED DOCUMENTS                      │
@@ -75,9 +53,10 @@ Show any markdown files in _ai/ directory:
 └─────────────────┴───────────────┴───────────────────────────┘
 ```
 
-### 4. Project Files Status
+### 3. Project Files Status
 
 Show generated JSON files and their status:
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                      PROJECT STATUS                         │
@@ -93,6 +72,7 @@ Show generated JSON files and their status:
 ## Error Handling
 
 If no selected technology files exist, show:
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    SELECTED TECHNOLOGY STACK                │
@@ -102,7 +82,7 @@ If no selected technology files exist, show:
 └─────────────────┴───────────────────────────────────────────┘
 ```
 
-If _ai directory doesn't exist, create it and show setup message.
+If \_ai directory doesn't exist, create it and show setup message.
 
 ## Technical Implementation
 
@@ -115,6 +95,7 @@ If _ai directory doesn't exist, create it and show setup message.
 ## TTS Notification
 
 Write a brief summary to `_ai/tts.txt`:
+
 - If files exist: "Status shows [X] selected technologies"
 - If no selections: "No tech stack selected yet"
 - If errors: "Status check completed with issues"

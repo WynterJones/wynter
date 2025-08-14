@@ -67,7 +67,7 @@ Creates comprehensive PRDs from high-level project ideas.
 
 **Sprint Planner**
 
-Transforms PRDs into actionable sprint plans with tasks, milestones, and timelines.
+Transforms PRDs into actionable sprint plans with tasks and milestones.
 
 **Usage Examples:**
 
@@ -312,7 +312,7 @@ Wynter generates and manages several key files:
 ### Enhancement
 
 - Research enhancements thoroughly before integration
-- Consider impact on existing timeline
+- Consider impact on existing plan
 - Maintain YAGNI principle discipline
 - Document enhancement decisions
 

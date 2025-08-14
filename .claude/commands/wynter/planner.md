@@ -127,7 +127,7 @@ Generate the following files in the `_ai/` directory:
       "feature": "string",
       "reason": "string",
       "priority": "high|medium|low",
-      "estimated_effort": "string",
+      "complexity": "simple|medium|complex",
       "dependencies": ["string"],
       "target_phase": "2|3|future"
     }

@@ -168,7 +168,7 @@ Updated sprint plan with:
 - **Feature**: [Description]
 - **Requested by**: [Source]
 - **Priority**: [High/Medium/Low]
-- **Estimated effort**: [Size estimate]
+- **Complexity**: [Simple/Medium/Complex]
 
 ## Analysis Results
 
