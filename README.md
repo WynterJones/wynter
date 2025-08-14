@@ -4,6 +4,20 @@ An AI-powered development framework for Claude Code that transforms ideas into a
 
 > **Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav) -- _perhaps building your own framework ontop of an agent is the future?_
 
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Core Philosophy](#core-philosophy)
+- [Key Features](#key-features)
+- [Quick Start](#quick-start)
+- [File Structure](#file-structure)
+- [Recommended Workflows](#recommended-workflows)
+- [Security & Compliance](#security--compliance)
+- [Customizing Technology Preferences](#customizing-technology-preferences)
+- [Contributing](#contributing)
+- [Best Practices](#best-practices)
+- [Troubleshooting](#troubleshooting)
+
 ## Core Philosophy
 
 - **YAGNI Principle**: "You Aren't Gonna Need It" - Build only what's necessary
@@ -72,7 +86,7 @@ Intelligent feature integration with:
 
 ### Installation
 
-1. Copy the /.claude/commands/wynter directory to your project directory.
+1. Copy the `/.claude/commands/wynter` directory to your project directory.
 
 2. **Set up OpenAI API key for TTS notifications:**
 
