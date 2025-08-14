@@ -17,6 +17,7 @@ if [ $# -eq 0 ]; then
     echo "  security    Run comprehensive security audit"
     echo "  check       Double-check and validate implementation"
     echo "  enhance     Add new features to existing sprint"
+    echo "  status      Show current project configuration and files"
     echo "  help        Show detailed help"
     echo ""
     echo "Examples:"
@@ -24,6 +25,7 @@ if [ $# -eq 0 ]; then
     echo "  /wynter:plan"
     echo "  /wynter:security --full"
     echo "  /wynter:enhance \"Add dark mode toggle\""
+    echo "  /wynter:status"
     echo ""
     echo "Output files are created in: _ai/"
     exit 0
@@ -62,6 +64,12 @@ case $SUBCOMMAND in
         echo "📁 Output directory: _ai/"
         echo ""
         cat ".claude/commands/wynter/enhance.md"
+        ;;
+    status)
+        echo "📊 Initializing Wynter Status Reporter..."
+        echo "📁 Checking: _ai/"
+        echo ""
+        cat ".claude/commands/wynter/status.md"
         ;;
     help)
         cat ".claude/commands/wynter/help.md"

@@ -18,6 +18,7 @@ An AI-powered development framework for Claude Code that transforms ideas into a
   - [/wynter:security](#wyntersecurity-mode)
   - [/wynter:check](#wyntercheck-mode)
   - [/wynter:enhance](#wynterenhance-feature-description)
+  - [/wynter:status](#wynterstatus)
 - [TTS Notifications Setup](#tts-notifications-setup)
 - [File Structure](#file-structure)
   - [The _ai Directory](#the-_ai-directory)
@@ -203,6 +204,15 @@ Intelligent feature enhancement
 ```
 
 Updates: `wynter-sprint.json`, creates `wynter-enhancement-analysis.md`, updates `wynter-deferred.json`
+
+### `/wynter:status`
+Show current project configuration and files in formatted tables
+
+```bash
+/wynter:status                              # Show complete project status
+```
+
+Displays: Technology stack, available options, generated documents, project file status
 
 ## TTS Notifications Setup
 
