@@ -14,7 +14,9 @@ An AI-powered development framework for Claude Code that transforms ideas into e
 ## Key Features
 
 ### PRD Generator (`/wynter:prd`)
+
 Transform high-level ideas into comprehensive Product Requirements Documents with:
+
 - Interactive technology stack selection
 - Market research and competitive analysis
 - Customized technical architecture recommendations
@@ -23,30 +25,38 @@ Transform high-level ideas into comprehensive Product Requirements Documents wit
 - Preference-based package and framework suggestions
 
 ### Sprint Planner (`/wynter:plan`)
+
 Convert PRDs into actionable sprint plans featuring:
+
 - Maximum 7 features per MVP (YAGNI enforcement)
 - 3-4 tasks per milestone structure
 - Parallel tech stack research agents
 - Built-in scope protection mechanisms
 
 ### Security Auditor (`/wynter:security`)
+
 Comprehensive security scanning with:
+
 - 5-8 parallel security analysis agents
 - OWASP, GDPR, SOC 2, HIPAA, PCI DSS compliance
 - Automated remediation recommendations
 - Multiple scanning modes (full, deps, code, config, quick)
 
 ### Validator & Double-Checker (`/wynter:check`)
+
 Quality assurance across 6 validation categories:
+
 - Functional validation
-- Technical validation  
+- Technical validation
 - Security validation
 - Performance validation
 - Testing validation
 - User experience validation
 
 ### Feature Enhancer (`/wynter:enhance`)
+
 Intelligent feature integration with:
+
 - Dependency analysis and optimal placement
 - Capacity-aware milestone integration
 - Automatic sprint plan updates with backup
@@ -62,54 +72,49 @@ Intelligent feature integration with:
 
 ### Installation
 
-1. **Clone Wynter to your project:**
-```bash
-git clone https://github.com/yourusername/wynter.git
-cd wynter
-```
+1. Copy the /.claude/commands/wynter directory to your project directory.
 
-2. **Copy Wynter commands to your project:**
-```bash
-cp .claude/commands/wynter /path/to/your/project/.claude/commands/
-cp -r .claude/commands/wynter_support /path/to/your/project/.claude/commands/
-cp .claude/settings.json /path/to/your/project/.claude/
-```
+2. **Set up OpenAI API key for TTS notifications:**
 
-3. **Set up OpenAI API key for TTS notifications:**
 ```bash
 export OPENAI_API_KEY="your-openai-api-key-here"
 ```
 
-4. **Make commands executable:**
+3. **Make commands executable:**
+
 ```bash
-chmod +x .claude/commands/wynter
-chmod +x .claude/commands/wynter_support/wynter-stop-hook.sh
-chmod +x .claude/commands/wynter_support/openai-tts-hook.sh
+chmod +x .claude/commands/wynter/wynter.sh
+chmod +x .claude/commands/wynter/wynter-stop-hook.sh
 ```
 
 ### Basic Usage
 
 1. **Generate a PRD:**
+
 ```bash
 /wynter:prd "Build a task management app for remote teams"
 ```
 
 2. **Create sprint plan:**
+
 ```bash
 /wynter:plan
 ```
 
 3. **Run security audit:**
+
 ```bash
 /wynter:security --full
 ```
 
 4. **Validate implementation:**
+
 ```bash
 /wynter:check --feature "user-authentication"
 ```
 
 5. **Enhance with new features:**
+
 ```bash
 /wynter:enhance "Add dark mode toggle"
 ```
@@ -117,9 +122,11 @@ chmod +x .claude/commands/wynter_support/openai-tts-hook.sh
 ## Command Reference
 
 ### `/wynter:prd "project description"`
+
 Generate comprehensive Product Requirements Document
 
 **Examples:**
+
 ```bash
 /wynter:prd "E-commerce platform with AI recommendations"
 /wynter:prd "Real-time collaboration whiteboard tool"
@@ -127,28 +134,34 @@ Generate comprehensive Product Requirements Document
 ```
 
 **Output Files:**
+
 - `prd.md` - Complete product requirements
 - Market analysis and technical recommendations
 
 ### `/wynter:plan [options]`
+
 Transform PRD into structured sprint plan
 
 **Options:**
+
 ```bash
 /wynter:plan                    # Full planning with research
-/wynter:plan --research-only    # Tech stack research only  
+/wynter:plan --research-only    # Tech stack research only
 /wynter:plan --quick           # Fast planning mode
 ```
 
 **Output Files:**
+
 - `wynter-sprint.json` - Structured sprint plan
 - `wynter-deferred.json` - Deferred features
 - `wynter-research.md` - Technology research
 
 ### `/wynter:security [mode]`
+
 Comprehensive security scanning
 
 **Modes:**
+
 ```bash
 /wynter:security --full        # Complete security audit
 /wynter:security --deps        # Dependencies only
@@ -158,14 +171,17 @@ Comprehensive security scanning
 ```
 
 **Output Files:**
+
 - `wynter-security-report.json` - Detailed findings
 - `wynter-security-remediation.md` - Fix guidance
 - `wynter-security-checklist.md` - Validation checklist
 
 ### `/wynter:check [mode]`
+
 Quality assurance and validation
 
 **Modes:**
+
 ```bash
 /wynter:check --full           # Complete validation
 /wynter:check --feature <name> # Single feature validation
@@ -175,14 +191,17 @@ Quality assurance and validation
 ```
 
 **Output Files:**
+
 - `wynter-validation-report.json` - Validation results
 - `wynter-validation-summary.md` - Executive summary
 - `wynter-test-results.md` - Test outcomes
 
 ### `/wynter:enhance "feature description"`
+
 Intelligent feature enhancement
 
 **Modes:**
+
 ```bash
 /wynter:enhance "Add user notifications"           # Smart enhancement
 /wynter:enhance --quick "Simple UI improvement"    # Quick addition
@@ -191,6 +210,7 @@ Intelligent feature enhancement
 ```
 
 **Output Files:**
+
 - Updated `wynter-sprint.json`
 - `wynter-enhancement-analysis.md` - Analysis report
 - Updated `wynter-deferred.json`
@@ -202,6 +222,7 @@ Wynter includes intelligent text-to-speech notifications that trigger after Wynt
 ### Setup
 
 1. **Set OpenAI API key:**
+
 ```bash
 export OPENAI_API_KEY="your-key-here"
 # Add to your ~/.bashrc or ~/.zshrc for persistence
@@ -209,7 +230,8 @@ echo 'export OPENAI_API_KEY="your-key-here"' >> ~/.bashrc
 ```
 
 2. **Automatic Configuration:**
-The `.claude/settings.json` file is already configured with a Stop hook that:
+   The `.claude/settings.json` file is already configured with a Stop hook that:
+
 - Only triggers after `/wynter:` commands complete
 - Reads dynamic summaries from `_ai/tts.txt`
 - Provides context-specific notifications
@@ -217,6 +239,7 @@ The `.claude/settings.json` file is already configured with a Stop hook that:
 ### How It Works
 
 **Dynamic Summaries:**
+
 - Each Wynter command writes a custom summary to `_ai/tts.txt`
 - The Stop hook reads this file and converts it to speech
 - Examples:
@@ -226,11 +249,13 @@ The `.claude/settings.json` file is already configured with a Stop hook that:
 
 **Fallback Summaries:**
 If no custom summary is provided, intelligent defaults are used:
+
 - PRD commands → "PRD generation completed successfully"
 - Security commands → "Security audit completed successfully"
 - Planning commands → "Sprint planning completed successfully"
 
 **Technical Details:**
+
 - Uses OpenAI TTS-1 model with "alloy" voice
 - Truncates to 5 words maximum for brevity
 - Supports macOS (afplay) and Linux (mpv/ffplay)
@@ -241,13 +266,15 @@ If no custom summary is provided, intelligent defaults are used:
 Wynter creates and manages these files in the `_ai/` directory:
 
 ### Technology Preferences (Customizable)
+
 - `tech-stacks.json` - Available backend/frontend frameworks and databases
 - `ruby-gems.json` - Ruby gems organized by category
-- `npm-packages.json` - NPM packages organized by category  
+- `npm-packages.json` - NPM packages organized by category
 - `styling-frameworks.json` - CSS frameworks and component libraries
 - `ui-patterns.json` - UI/UX patterns and layout approaches
 
 ### Selected Technologies (Generated)
+
 - `selected-tech-stack.json` - User's chosen technology stack
 - `selected-gems.json` - Chosen Ruby gems (if Rails)
 - `selected-packages.json` - Chosen NPM packages (if Node.js)
@@ -255,29 +282,35 @@ Wynter creates and manages these files in the `_ai/` directory:
 - `selected-ui-patterns.json` - Chosen UI patterns
 
 ### Project Documents
+
 - `prd.md` - Product Requirements Document
 - `wynter-research.md` - Technology research findings
 
-### Sprint Management  
+### Sprint Management
+
 - `wynter-sprint.json` - Active sprint plan and tasks
 - `wynter-deferred.json` - Deferred features and future planning
 
 ### Quality Assurance
+
 - `wynter-validation-report.json` - Validation results
 - `wynter-validation-summary.md` - Validation summary
 - `wynter-test-results.md` - Test execution results
 
 ### Security
+
 - `wynter-security-report.json` - Security scan results
 - `wynter-security-remediation.md` - Security fix guidance
 - `wynter-security-checklist.md` - Security validation checklist
 
 ### Enhancement Tracking
+
 - `wynter-enhancement-analysis.md` - Feature enhancement analysis
 
 ## Recommended Workflows
 
 ### New Project Workflow
+
 1. **Generate PRD**: `/wynter:prd "project description"`
 2. **Create Sprint Plan**: `/wynter:plan`
 3. **Implement Features**: Follow sprint plan tasks
@@ -286,6 +319,7 @@ Wynter creates and manages these files in the `_ai/` directory:
 6. **Final Validation**: `/wynter:check --deploy`
 
 ### Feature Enhancement Workflow
+
 1. **Research Enhancement**: `/wynter:enhance --research "new feature"`
 2. **Integrate Feature**: `/wynter:enhance "approved feature"`
 3. **Implement Changes**: Follow updated sprint plan
@@ -293,6 +327,7 @@ Wynter creates and manages these files in the `_ai/` directory:
 5. **Security Check**: `/wynter:security --code`
 
 ### Continuous Quality Workflow
+
 1. **Daily Security**: `/wynter:security --quick` (in CI/CD)
 2. **Feature Validation**: `/wynter:check --feature <name>` (after implementation)
 3. **Weekly Full Check**: `/wynter:check --full`
@@ -316,18 +351,20 @@ Wynter uses preference files to suggest technologies during PRD generation. You 
 ### Adding New Technologies
 
 1. **Edit preference files** in `_ai/` directory:
+
    ```bash
    # Add new Ruby gems
    nano _ai/ruby-gems.json
-   
-   # Add new NPM packages  
+
+   # Add new NPM packages
    nano _ai/npm-packages.json
-   
+
    # Add new styling frameworks
    nano _ai/styling-frameworks.json
    ```
 
 2. **Follow the existing JSON structure**:
+
    ```json
    {
      "category_name": [
@@ -349,11 +386,13 @@ Wynter uses preference files to suggest technologies during PRD generation. You 
 ### Technology Categories
 
 **Backend/Frontend Frameworks** (`tech-stacks.json`):
+
 - Backend frameworks (Rails, Django, Express, etc.)
 - Frontend frameworks (React, Vue, Angular, etc.)
 - Databases (PostgreSQL, MongoDB, Redis, etc.)
 
 **Ruby Gems** (`ruby-gems.json`):
+
 - Authentication (devise, omniauth)
 - Authorization (pundit, cancancan)
 - API tools (grape, jbuilder)
@@ -361,6 +400,7 @@ Wynter uses preference files to suggest technologies during PRD generation. You 
 - Testing (rspec, factory_bot)
 
 **NPM Packages** (`npm-packages.json`):
+
 - State management (zustand, redux)
 - HTTP clients (axios, react-query)
 - Forms (react-hook-form, zod)
@@ -368,11 +408,13 @@ Wynter uses preference files to suggest technologies during PRD generation. You 
 - Testing (jest, playwright)
 
 **Styling & UI** (`styling-frameworks.json`):
+
 - CSS frameworks (Tailwind, Bootstrap)
 - Component libraries (shadcn/ui, Chakra UI)
 - CSS-in-JS (styled-components, emotion)
 
 **UI Patterns** (`ui-patterns.json`):
+
 - Layout patterns (sidebar, header+main)
 - Navigation patterns (top nav, tabs)
 - Component patterns (cards, modals)
@@ -382,33 +424,37 @@ Wynter uses preference files to suggest technologies during PRD generation. You 
 
 Wynter is designed to be extensible and customizable:
 
-1. **Add new validation rules** in `.claude/commands/wynter_support/validator.md`
-2. **Extend security checks** in `.claude/commands/wynter_support/security.md`
-3. **Customize enhancement logic** in `.claude/commands/wynter_support/enhance.md`
+1. **Add new validation rules** in `.claude/commands/wynter/validator.md`
+2. **Extend security checks** in `.claude/commands/wynter/security.md`
+3. **Customize enhancement logic** in `.claude/commands/wynter/enhance.md`
 4. **Add compliance frameworks** to security scanning
 5. **Contribute technology preferences** by submitting PRs with new options
 
 ## Best Practices
 
 ### PRD Creation
+
 - Be specific about target users and use cases
 - Include business objectives and success metrics
 - Mention technical constraints early
 - Consider compliance and security requirements
 
 ### Sprint Planning
+
 - Trust the 7-feature MVP limit
 - Don't skip the research phase
 - Review deferred features regularly
 - Maintain milestone capacity discipline
 
 ### Security
+
 - Run security scans frequently
 - Address critical vulnerabilities immediately
 - Follow compliance framework requirements
 - Integrate security into development workflow
 
 ### Validation
+
 - Validate features as they're completed
 - Use appropriate validation modes for context
 - Address validation issues promptly
@@ -419,12 +465,14 @@ Wynter is designed to be extensible and customizable:
 ### Common Issues
 
 **Command not found:**
+
 ```bash
 # Ensure wynter is executable
 chmod +x .claude/commands/wynter
 ```
 
 **TTS not working:**
+
 ```bash
 # Check OpenAI API key
 echo $OPENAI_API_KEY
@@ -434,16 +482,18 @@ mpv --version  # Linux
 ```
 
 **JSON validation errors:**
+
 ```bash
 # Check JSON syntax
 cat wynter-sprint.json | python -m json.tool
 ```
 
 **Permission errors:**
+
 ```bash
 # Fix file permissions
-chmod +x .claude/commands/wynter_support/openai-tts-hook.sh
-chmod 644 .claude/commands/wynter_support/*.md
+chmod +x .claude/commands/wynter/openai-tts-hook.sh
+chmod 644 .claude/commands/wynter/*.md
 ```
 
 ## License

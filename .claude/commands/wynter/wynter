@@ -37,34 +37,34 @@ case $SUBCOMMAND in
         echo "🚀 Initializing Wynter PRD Generator..."
         echo "📁 Output directory: _ai/"
         echo ""
-        cat ".claude/commands/wynter_support/prd.md"
+        cat ".claude/commands/wynter/prd.md"
         ;;
     plan)
         echo "📊 Initializing Wynter Sprint Planner..."
         echo "📁 Output directory: _ai/"
         echo ""
-        cat ".claude/commands/wynter_support/planner.md"
+        cat ".claude/commands/wynter/planner.md"
         ;;
     security)
         echo "🔒 Initializing Wynter Security Auditor..."
         echo "📁 Output directory: _ai/"
         echo ""
-        cat ".claude/commands/wynter_support/security.md"
+        cat ".claude/commands/wynter/security.md"
         ;;
     check)
         echo "✅ Initializing Wynter Validator & Double-Checker..."
         echo "📁 Output directory: _ai/"
         echo ""
-        cat ".claude/commands/wynter_support/validator.md"
+        cat ".claude/commands/wynter/validator.md"
         ;;
     enhance)
         echo "🔧 Initializing Wynter Feature Enhancer..."
         echo "📁 Output directory: _ai/"
         echo ""
-        cat ".claude/commands/wynter_support/enhance.md"
+        cat ".claude/commands/wynter/enhance.md"
         ;;
     help)
-        cat ".claude/commands/wynter_support/help.md"
+        cat ".claude/commands/wynter/help.md"
         ;;
     *)
         echo "Unknown command: $SUBCOMMAND"
