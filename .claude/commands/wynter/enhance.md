@@ -203,7 +203,7 @@ Enhanced deferred features list with:
 
 - Newly analyzed features
 - Updated priority rankings
-- Refined effort estimates
+- Refined complexity assessments
 - Enhanced dependency mapping
 
 ## Safety Mechanisms

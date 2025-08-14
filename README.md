@@ -1,6 +1,10 @@
+# 🚀 Wynter
+
+**Plan. Build. No timeline, just vibes.**
+
 <img src="/tmp/screenshot.png" width="700"/>
 
-An AI-powered development framework for Claude Code that transforms ideas into applications while following my own development process after 20+ years of building software.
+A development framework for **Claude Code**. Designed after 20+ years of building software.
 
 > **Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav) -- _perhaps building your own framework ontop of an agent is the future?_
 
@@ -23,7 +27,7 @@ An AI-powered development framework for Claude Code that transforms ideas into a
 - [File Structure](#file-structure)
   - [The \_ai Directory](#the-_ai-directory)
   - [Project Documents](#project-documents)
-  - [Sprint Management](#sprint-management)
+  - [Flow Management](#flow-management)
   - [Quality Assurance](#quality-assurance)
   - [Security](#security)
   - [Enhancement Tracking](#enhancement-tracking)
@@ -54,12 +58,12 @@ Transform high-level ideas into comprehensive Product Requirements Documents wit
 - Risk assessment and mitigation strategies
 - Preference-based package and framework suggestions
 
-### Sprint Planner (`/wynter:plan`)
+### Flow Planner (`/wynter:plan`)
 
-Convert PRDs into actionable sprint plans featuring:
+Convert PRDs into actionable development flows featuring:
 
 - Maximum 7 features per MVP (YAGNI enforcement)
-- 3-4 tasks per milestone structure
+- 3-4 tasks per stream structure
 - Parallel tech stack research agents
 - Built-in scope protection mechanisms
 
@@ -88,8 +92,8 @@ Quality assurance across 6 validation categories:
 Intelligent feature integration with:
 
 - Dependency analysis and optimal placement
-- Capacity-aware milestone integration
-- Automatic sprint plan updates with backup
+- Capacity-aware stream integration
+- Automatic flow plan updates with backup
 - YAGNI principle enforcement
 
 ## Quick Start
@@ -119,7 +123,7 @@ Intelligent feature integration with:
 /wynter:prd "Build a task management app for remote teams"
 ```
 
-2. **Create sprint plan:**
+2. **Create flow plan:**
 
 ```bash
 /wynter:plan
@@ -159,7 +163,7 @@ Creates: `prd.md`, market analysis, tech recommendations
 
 ### `/wynter:plan [options]`
 
-Transform PRD into structured sprint plan
+Transform PRD into structured development flow
 
 ```bash
 /wynter:plan                    # Full planning with research
@@ -167,7 +171,7 @@ Transform PRD into structured sprint plan
 /wynter:plan --quick           # Fast planning mode
 ```
 
-Creates: `wynter-sprint.json`, `wynter-deferred.json`, `wynter-research.md`
+Creates: `wynter-flow.json`, `wynter-deferred.json`, `wynter-research.md`
 
 ### `/wynter:security [mode]`
 
@@ -208,7 +212,7 @@ Intelligent feature enhancement
 /wynter:enhance --defer "Future feature idea"      # Add to backlog
 ```
 
-Updates: `wynter-sprint.json`, creates `wynter-enhancement-analysis.md`, updates `wynter-deferred.json`
+Updates: `wynter-flow.json`, creates `wynter-enhancement-analysis.md`, updates `wynter-deferred.json`
 
 ### `/wynter:status`
 
@@ -266,9 +270,9 @@ The configuration files let you customize what technologies Wynter suggests duri
 - `prd.md` - Product Requirements Document
 - `wynter-research.md` - Technology research findings
 
-### Sprint Management
+### Flow Management
 
-- `wynter-sprint.json` - Active sprint plan and tasks
+- `wynter-flow.json` - Active development flow and tasks
 - `wynter-deferred.json` - Deferred features and future planning
 
 ### Quality Assurance
@@ -292,8 +296,8 @@ The configuration files let you customize what technologies Wynter suggests duri
 ### New Project Workflow
 
 1. **Generate PRD**: `/wynter:prd "project description"`
-2. **Create Sprint Plan**: `/wynter:plan`
-3. **Implement Features**: Follow sprint plan tasks
+2. **Create Flow Plan**: `/wynter:plan`
+3. **Implement Features**: Follow flow plan tasks
 4. **Validate Progress**: `/wynter:check --feature <name>`
 5. **Security Review**: `/wynter:security --full`
 6. **Final Validation**: `/wynter:check --deploy`
@@ -302,7 +306,7 @@ The configuration files let you customize what technologies Wynter suggests duri
 
 1. **Research Enhancement**: `/wynter:enhance --research "new feature"`
 2. **Integrate Feature**: `/wynter:enhance "approved feature"`
-3. **Implement Changes**: Follow updated sprint plan
+3. **Implement Changes**: Follow updated flow plan
 4. **Validate Integration**: `/wynter:check --regression`
 5. **Security Check**: `/wynter:security --code`
 
@@ -376,7 +380,7 @@ Wynter is designed to be extensible:
 - Include business objectives and success metrics
 - Mention technical constraints and compliance needs
 
-**Sprint Planning:**
+**Flow Planning:**
 
 - Trust the 7-feature MVP limit
 - Don't skip the research phase

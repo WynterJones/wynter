@@ -79,7 +79,7 @@ Transforms PRDs into actionable sprint plans with tasks and milestones.
 
 **Output Files:**
 
-- `wynter-sprint.json` - Structured sprint plan with tasks and milestones
+- `wynter-flow.json` - Structured development flow
 - `wynter-deferred.json` - Features deferred to future phases
 - `wynter-research.md` - Technology research and recommendations
 
@@ -176,13 +176,13 @@ Intelligently adds new features to existing sprint plans.
 **Key Capabilities:**
 
 - Dependency analysis and optimal placement
-- Capacity-aware milestone integration
-- Automatic sprint plan updates with backup
+- Capacity-aware stream integration
+- Automatic flow plan updates with backup
 - YAGNI principle enforcement
 
 **Output Files:**
 
-- Updated `wynter-sprint.json`
+- Updated `wynter-flow.json`
 - `wynter-enhancement-analysis.md` - Feature analysis report
 - Updated `wynter-deferred.json`
 
@@ -228,8 +228,8 @@ Display available commands and usage information.
 ### New Project Workflow
 
 1. **Generate PRD**: `/wynter:prd "project description"`
-2. **Create Sprint Plan**: `/wynter:plan`
-3. **Implement Features**: Follow sprint plan tasks
+2. **Create Flow Plan**: `/wynter:plan`
+3. **Implement Features**: Follow flow plan tasks
 4. **Validate Progress**: `/wynter:check --feature <name>`
 5. **Security Review**: `/wynter:security --full`
 6. **Final Validation**: `/wynter:check --deploy`
@@ -238,7 +238,7 @@ Display available commands and usage information.
 
 1. **Analyze Enhancement**: `/wynter:enhance --research "new feature"`
 2. **Integrate Feature**: `/wynter:enhance "approved feature"`
-3. **Implement Changes**: Follow updated sprint plan
+3. **Implement Changes**: Follow updated flow plan
 4. **Validate Integration**: `/wynter:check --regression`
 5. **Security Check**: `/wynter:security --code`
 
@@ -258,9 +258,9 @@ Wynter generates and manages several key files:
 - `prd.md` - Product Requirements Document
 - `wynter-research.md` - Technology research findings
 
-### Sprint Management
+### Flow Management
 
-- `wynter-sprint.json` - Active sprint plan and tasks
+- `wynter-flow.json` - Active development flow and tasks
 - `wynter-deferred.json` - Deferred features and future planning
 
 ### Quality Assurance
@@ -288,12 +288,12 @@ Wynter generates and manages several key files:
 - Mention technical constraints early
 - Consider compliance and security requirements
 
-### Sprint Planning
+### Flow Planning
 
 - Trust the 7-feature MVP limit
 - Don't skip the research phase
 - Review deferred features regularly
-- Maintain milestone capacity discipline
+- Maintain stream capacity discipline
 
 ### Security
 
