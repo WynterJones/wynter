@@ -1,56 +1,56 @@
-# Wynter 🚀
+# Wynter
 
 An AI-powered development framework for Claude Code that transforms ideas into enterprise-grade applications while preventing common development pitfalls.
 
 **Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav) but designed specifically for comprehensive project lifecycle management with enhanced security, validation, and intelligent feature enhancement capabilities.
 
-## 🎯 Core Philosophy
+## Core Philosophy
 
 - **YAGNI Principle**: "You Aren't Gonna Need It" - Build only what's necessary
 - **Security First**: Every feature must meet security standards from day one
 - **Quality Gates**: Systematic validation at every development stage
 - **Scope Discipline**: Prevent feature creep and maintain laser focus
 
-## ✨ Key Features
+## Key Features
 
-### 📋 PRD Generator (`/wynter:prd`)
+### PRD Generator (`/wynter:prd`)
 Transform high-level ideas into comprehensive Product Requirements Documents with:
 - Market research and competitive analysis
 - Technical architecture recommendations
 - User stories with acceptance criteria
 - Risk assessment and mitigation strategies
 
-### 📊 Sprint Planner (`/wynter:plan`)
+### Sprint Planner (`/wynter:plan`)
 Convert PRDs into actionable sprint plans featuring:
 - Maximum 7 features per MVP (YAGNI enforcement)
 - 3-4 tasks per milestone structure
 - Parallel tech stack research agents
 - Built-in scope protection mechanisms
 
-### 🔒 Security Auditor (`/wynter:security`)
+### Security Auditor (`/wynter:security`)
 Comprehensive security scanning with:
 - 5-8 parallel security analysis agents
 - OWASP, GDPR, SOC 2, HIPAA, PCI DSS compliance
 - Automated remediation recommendations
 - Multiple scanning modes (full, deps, code, config, quick)
 
-### ✅ Validator & Double-Checker (`/wynter:check`)
+### Validator & Double-Checker (`/wynter:check`)
 Quality assurance across 6 validation categories:
-- 🎯 Functional validation
-- 🏗️ Technical validation  
-- 🔒 Security validation
-- ⚡ Performance validation
-- 🧪 Testing validation
-- 📱 User experience validation
+- Functional validation
+- Technical validation  
+- Security validation
+- Performance validation
+- Testing validation
+- User experience validation
 
-### 🔧 Feature Enhancer (`/wynter:enhance`)
+### Feature Enhancer (`/wynter:enhance`)
 Intelligent feature integration with:
 - Dependency analysis and optimal placement
 - Capacity-aware milestone integration
 - Automatic sprint plan updates with backup
 - YAGNI principle enforcement
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -110,7 +110,7 @@ chmod +x .claude/commands/wynter_dir/openai-tts-hook.sh
 /wynter:enhance "Add dark mode toggle"
 ```
 
-## 📖 Command Reference
+## Command Reference
 
 ### `/wynter:prd "project description"`
 Generate comprehensive Product Requirements Document
@@ -191,7 +191,7 @@ Intelligent feature enhancement
 - `wynter-enhancement-analysis.md` - Analysis report
 - Updated `wynter-deferred.json`
 
-## 🔧 TTS Notifications Setup
+## TTS Notifications Setup
 
 Wynter includes text-to-speech notifications for task completion:
 
@@ -210,7 +210,7 @@ echo 'export OPENAI_API_KEY="your-key-here"' >> ~/.bashrc
 3. **Configure Claude Code hooks** (optional):
 The `.claude/settings.json` file is already configured for automatic TTS notifications.
 
-## 📁 File Structure
+## File Structure
 
 Wynter creates and manages these files in your project root:
 
@@ -235,7 +235,7 @@ Wynter creates and manages these files in your project root:
 ### Enhancement Tracking
 - `wynter-enhancement-analysis.md` - Feature enhancement analysis
 
-## 🔄 Recommended Workflows
+## Recommended Workflows
 
 ### New Project Workflow
 1. **Generate PRD**: `/wynter:prd "project description"`
@@ -258,7 +258,7 @@ Wynter creates and manages these files in your project root:
 3. **Weekly Full Check**: `/wynter:check --full`
 4. **Pre-deployment**: `/wynter:check --deploy` + `/wynter:security --full`
 
-## 🛡️ Security & Compliance
+## Security & Compliance
 
 Wynter supports multiple security frameworks:
 
@@ -269,16 +269,16 @@ Wynter supports multiple security frameworks:
 - **PCI DSS** - Payment card industry standards
 - **NIST** - Cybersecurity framework
 
-## 🤝 Contributing
+## Contributing
 
 Wynter is designed to be extensible and customizable:
 
-1. **Add new validation rules** in `.claude/commands/wynter.d/validator.md`
-2. **Extend security checks** in `.claude/commands/wynter.d/security.md`
-3. **Customize enhancement logic** in `.claude/commands/wynter.d/enhance.md`
+1. **Add new validation rules** in `.claude/commands/wynter_dir/validator.md`
+2. **Extend security checks** in `.claude/commands/wynter_dir/security.md`
+3. **Customize enhancement logic** in `.claude/commands/wynter_dir/enhance.md`
 4. **Add compliance frameworks** to security scanning
 
-## 📋 Best Practices
+## Best Practices
 
 ### PRD Creation
 - Be specific about target users and use cases
@@ -304,7 +304,7 @@ Wynter is designed to be extensible and customizable:
 - Address validation issues promptly
 - Maintain test coverage standards
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -336,11 +336,11 @@ chmod +x .claude/commands/wynter_dir/openai-tts-hook.sh
 chmod 644 .claude/commands/wynter_dir/*.md
 ```
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by [Gustav](https://github.com/dimitritholen/gustav) by Dimitri Tholen
 - Built for [Claude Code](https://claude.ai/code) by Anthropic
@@ -348,6 +348,6 @@ MIT License - see LICENSE file for details.
 
 ---
 
-**Happy building with Wynter! 🚀**
+**Happy building with Wynter!**
 
 For support and questions, check the help system: `/wynter:help`
