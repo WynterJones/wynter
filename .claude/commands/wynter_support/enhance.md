@@ -139,7 +139,9 @@ Intelligently analyze, research, and integrate new features into existing sprint
 
 ## Output Artifacts
 
-### 1. Enhanced Sprint Plan (`wynter-sprint.json`)
+**TTS SUMMARY**: After completing the feature enhancement, write a brief 5-word summary to `_ai/tts.txt` describing what was enhanced (e.g., "Added dark mode to sprint").
+
+### 1. Enhanced Sprint Plan (`_ai/wynter-sprint.json`)
 
 Updated sprint plan with:
 

@@ -1,21 +1,11 @@
 {
   "hooks": {
-    "PostToolUse": [
+    "Stop": [
       {
-        "matcher": "MultiEdit",
         "hooks": [
           {
             "type": "command",
-            "command": ".claude/commands/wynter_dir/openai-tts-hook.sh 'Multiple files updated'"
-          }
-        ]
-      },
-      {
-        "matcher": "Bash.*git commit|Bash.*npm.*build|Bash.*test",
-        "hooks": [
-          {
-            "type": "command", 
-            "command": ".claude/commands/wynter_dir/openai-tts-hook.sh 'Build task completed'"
+            "command": ".claude/commands/wynter_support/wynter-stop-hook.sh"
           }
         ]
       }

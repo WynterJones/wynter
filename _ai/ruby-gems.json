@@ -1,0 +1,168 @@
+{
+  "authentication": [
+    {
+      "name": "devise",
+      "description": "Flexible authentication solution for Rails",
+      "use_cases": ["user authentication", "password reset", "email confirmation"],
+      "popularity": "very high"
+    },
+    {
+      "name": "omniauth",
+      "description": "Multi-provider authentication framework",
+      "use_cases": ["OAuth integration", "social login", "SSO"],
+      "popularity": "high"
+    },
+    {
+      "name": "jwt",
+      "description": "JSON Web Token implementation",
+      "use_cases": ["API authentication", "stateless auth", "microservices"],
+      "popularity": "high"
+    }
+  ],
+  "authorization": [
+    {
+      "name": "pundit",
+      "description": "Object-oriented authorization via plain Ruby classes",
+      "use_cases": ["role-based access", "policy management", "permissions"],
+      "popularity": "very high"
+    },
+    {
+      "name": "cancancan",
+      "description": "Authorization library which restricts what resources a user can access",
+      "use_cases": ["ability definitions", "resource authorization", "admin panels"],
+      "popularity": "high"
+    }
+  ],
+  "api": [
+    {
+      "name": "grape",
+      "description": "REST-like API framework for Ruby",
+      "use_cases": ["API development", "versioning", "parameter validation"],
+      "popularity": "high"
+    },
+    {
+      "name": "jbuilder",
+      "description": "JSON templating for Rails",
+      "use_cases": ["JSON APIs", "response formatting", "nested data"],
+      "popularity": "very high"
+    },
+    {
+      "name": "fast_jsonapi",
+      "description": "JSON:API serializer for Ruby Objects",
+      "use_cases": ["JSON:API compliance", "fast serialization", "relationships"],
+      "popularity": "medium"
+    }
+  ],
+  "database": [
+    {
+      "name": "pg",
+      "description": "PostgreSQL adapter for Ruby",
+      "use_cases": ["PostgreSQL connections", "advanced SQL features"],
+      "popularity": "very high"
+    },
+    {
+      "name": "mysql2",
+      "description": "MySQL adapter for Ruby",
+      "use_cases": ["MySQL connections", "high performance"],
+      "popularity": "high"
+    },
+    {
+      "name": "redis",
+      "description": "Redis client library",
+      "use_cases": ["caching", "session storage", "background jobs"],
+      "popularity": "very high"
+    },
+    {
+      "name": "mongoid",
+      "description": "MongoDB object document mapper",
+      "use_cases": ["MongoDB integration", "document modeling"],
+      "popularity": "medium"
+    }
+  ],
+  "background_jobs": [
+    {
+      "name": "sidekiq",
+      "description": "Simple, efficient background processing for Ruby",
+      "use_cases": ["background jobs", "scheduled tasks", "queue processing"],
+      "popularity": "very high"
+    },
+    {
+      "name": "delayed_job",
+      "description": "Database-backed asynchronous priority queue",
+      "use_cases": ["background processing", "email sending", "file processing"],
+      "popularity": "high"
+    },
+    {
+      "name": "resque",
+      "description": "Redis-backed Ruby library for creating background jobs",
+      "use_cases": ["background jobs", "queue management", "job monitoring"],
+      "popularity": "medium"
+    }
+  ],
+  "testing": [
+    {
+      "name": "rspec-rails",
+      "description": "RSpec testing framework for Rails",
+      "use_cases": ["unit testing", "integration testing", "BDD"],
+      "popularity": "very high"
+    },
+    {
+      "name": "factory_bot_rails",
+      "description": "Test data generation library",
+      "use_cases": ["test fixtures", "object creation", "test setup"],
+      "popularity": "very high"
+    },
+    {
+      "name": "capybara",
+      "description": "Acceptance test framework for web applications",
+      "use_cases": ["integration testing", "feature testing", "browser automation"],
+      "popularity": "very high"
+    },
+    {
+      "name": "vcr",
+      "description": "Record HTTP interactions for testing",
+      "use_cases": ["API testing", "HTTP mocking", "test isolation"],
+      "popularity": "high"
+    }
+  ],
+  "development": [
+    {
+      "name": "pry-rails",
+      "description": "Enhanced debugging and development tools",
+      "use_cases": ["debugging", "REPL", "code exploration"],
+      "popularity": "very high"
+    },
+    {
+      "name": "better_errors",
+      "description": "Better error page for Rails and other Rack apps",
+      "use_cases": ["error debugging", "development tools", "stack traces"],
+      "popularity": "high"
+    },
+    {
+      "name": "bullet",
+      "description": "Help to kill N+1 queries and unused eager loading",
+      "use_cases": ["performance optimization", "query analysis", "N+1 detection"],
+      "popularity": "high"
+    }
+  ],
+  "file_upload": [
+    {
+      "name": "image_processing",
+      "description": "High-level image processing wrapper for libvips and ImageMagick",
+      "use_cases": ["image resizing", "format conversion", "image optimization"],
+      "popularity": "high"
+    },
+    {
+      "name": "shrine",
+      "description": "File attachment toolkit for Ruby applications",
+      "use_cases": ["file uploads", "cloud storage", "image processing"],
+      "popularity": "medium"
+    },
+    {
+      "name": "carrierwave",
+      "description": "Classier solution for file uploads for Rails",
+      "use_cases": ["file uploads", "image processing", "cloud storage"],
+      "popularity": "high"
+    }
+  ]
+}

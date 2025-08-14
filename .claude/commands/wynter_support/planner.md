@@ -50,7 +50,9 @@ Create a structured sprint plan with:
 
 ## Output Artifacts
 
-Generate the following files in the project root:
+Generate the following files in the `_ai/` directory:
+
+**TTS SUMMARY**: After completing the sprint plan, write a brief 5-word summary to `_ai/tts.txt` describing what was accomplished (e.g., "Sprint plan with seven features").
 
 ### 1. `wynter-sprint.json`
 

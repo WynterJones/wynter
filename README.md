@@ -15,10 +15,12 @@ An AI-powered development framework for Claude Code that transforms ideas into e
 
 ### PRD Generator (`/wynter:prd`)
 Transform high-level ideas into comprehensive Product Requirements Documents with:
+- Interactive technology stack selection
 - Market research and competitive analysis
-- Technical architecture recommendations
+- Customized technical architecture recommendations
 - User stories with acceptance criteria
 - Risk assessment and mitigation strategies
+- Preference-based package and framework suggestions
 
 ### Sprint Planner (`/wynter:plan`)
 Convert PRDs into actionable sprint plans featuring:
@@ -68,7 +70,8 @@ cd wynter
 
 2. **Copy Wynter commands to your project:**
 ```bash
-cp -r .claude/commands/wynter* /path/to/your/project/.claude/commands/
+cp .claude/commands/wynter /path/to/your/project/.claude/commands/
+cp -r .claude/commands/wynter_support /path/to/your/project/.claude/commands/
 cp .claude/settings.json /path/to/your/project/.claude/
 ```
 
@@ -80,7 +83,8 @@ export OPENAI_API_KEY="your-openai-api-key-here"
 4. **Make commands executable:**
 ```bash
 chmod +x .claude/commands/wynter
-chmod +x .claude/commands/wynter_dir/openai-tts-hook.sh
+chmod +x .claude/commands/wynter_support/wynter-stop-hook.sh
+chmod +x .claude/commands/wynter_support/openai-tts-hook.sh
 ```
 
 ### Basic Usage
@@ -193,7 +197,9 @@ Intelligent feature enhancement
 
 ## TTS Notifications Setup
 
-Wynter includes text-to-speech notifications for task completion:
+Wynter includes intelligent text-to-speech notifications that trigger after Wynter commands complete:
+
+### Setup
 
 1. **Set OpenAI API key:**
 ```bash
@@ -202,17 +208,51 @@ export OPENAI_API_KEY="your-key-here"
 echo 'export OPENAI_API_KEY="your-key-here"' >> ~/.bashrc
 ```
 
-2. **Test TTS functionality:**
-```bash
-./wynter-tts-hook.sh "Feature implemented successfully"
-```
+2. **Automatic Configuration:**
+The `.claude/settings.json` file is already configured with a Stop hook that:
+- Only triggers after `/wynter:` commands complete
+- Reads dynamic summaries from `_ai/tts.txt`
+- Provides context-specific notifications
 
-3. **Configure Claude Code hooks** (optional):
-The `.claude/settings.json` file is already configured for automatic TTS notifications.
+### How It Works
+
+**Dynamic Summaries:**
+- Each Wynter command writes a custom summary to `_ai/tts.txt`
+- The Stop hook reads this file and converts it to speech
+- Examples:
+  - `/wynter:prd` → "PRD for task app completed"
+  - `/wynter:plan` → "Sprint plan with seven features"
+  - `/wynter:security` → "Security scan found three issues"
+
+**Fallback Summaries:**
+If no custom summary is provided, intelligent defaults are used:
+- PRD commands → "PRD generation completed successfully"
+- Security commands → "Security audit completed successfully"
+- Planning commands → "Sprint planning completed successfully"
+
+**Technical Details:**
+- Uses OpenAI TTS-1 model with "alloy" voice
+- Truncates to 5 words maximum for brevity
+- Supports macOS (afplay) and Linux (mpv/ffplay)
+- Automatically cleans up temporary files
 
 ## File Structure
 
-Wynter creates and manages these files in your project root:
+Wynter creates and manages these files in the `_ai/` directory:
+
+### Technology Preferences (Customizable)
+- `tech-stacks.json` - Available backend/frontend frameworks and databases
+- `ruby-gems.json` - Ruby gems organized by category
+- `npm-packages.json` - NPM packages organized by category  
+- `styling-frameworks.json` - CSS frameworks and component libraries
+- `ui-patterns.json` - UI/UX patterns and layout approaches
+
+### Selected Technologies (Generated)
+- `selected-tech-stack.json` - User's chosen technology stack
+- `selected-gems.json` - Chosen Ruby gems (if Rails)
+- `selected-packages.json` - Chosen NPM packages (if Node.js)
+- `selected-styling.json` - Chosen styling approach
+- `selected-ui-patterns.json` - Chosen UI patterns
 
 ### Project Documents
 - `prd.md` - Product Requirements Document
@@ -269,14 +309,84 @@ Wynter supports multiple security frameworks:
 - **PCI DSS** - Payment card industry standards
 - **NIST** - Cybersecurity framework
 
+## Customizing Technology Preferences
+
+Wynter uses preference files to suggest technologies during PRD generation. You can customize these to match your team's preferences:
+
+### Adding New Technologies
+
+1. **Edit preference files** in `_ai/` directory:
+   ```bash
+   # Add new Ruby gems
+   nano _ai/ruby-gems.json
+   
+   # Add new NPM packages  
+   nano _ai/npm-packages.json
+   
+   # Add new styling frameworks
+   nano _ai/styling-frameworks.json
+   ```
+
+2. **Follow the existing JSON structure**:
+   ```json
+   {
+     "category_name": [
+       {
+         "name": "package-name",
+         "description": "What this package does",
+         "use_cases": ["case1", "case2"],
+         "popularity": "high|medium|low"
+       }
+     ]
+   }
+   ```
+
+3. **Wynter will automatically**:
+   - Present your custom options during PRD generation
+   - Ask if you want to add new packages to preference files
+   - Remember your selections for future projects
+
+### Technology Categories
+
+**Backend/Frontend Frameworks** (`tech-stacks.json`):
+- Backend frameworks (Rails, Django, Express, etc.)
+- Frontend frameworks (React, Vue, Angular, etc.)
+- Databases (PostgreSQL, MongoDB, Redis, etc.)
+
+**Ruby Gems** (`ruby-gems.json`):
+- Authentication (devise, omniauth)
+- Authorization (pundit, cancancan)
+- API tools (grape, jbuilder)
+- Background jobs (sidekiq, delayed_job)
+- Testing (rspec, factory_bot)
+
+**NPM Packages** (`npm-packages.json`):
+- State management (zustand, redux)
+- HTTP clients (axios, react-query)
+- Forms (react-hook-form, zod)
+- Animation (framer-motion, react-spring)
+- Testing (jest, playwright)
+
+**Styling & UI** (`styling-frameworks.json`):
+- CSS frameworks (Tailwind, Bootstrap)
+- Component libraries (shadcn/ui, Chakra UI)
+- CSS-in-JS (styled-components, emotion)
+
+**UI Patterns** (`ui-patterns.json`):
+- Layout patterns (sidebar, header+main)
+- Navigation patterns (top nav, tabs)
+- Component patterns (cards, modals)
+- Interaction patterns (infinite scroll, drag-drop)
+
 ## Contributing
 
 Wynter is designed to be extensible and customizable:
 
-1. **Add new validation rules** in `.claude/commands/wynter_dir/validator.md`
-2. **Extend security checks** in `.claude/commands/wynter_dir/security.md`
-3. **Customize enhancement logic** in `.claude/commands/wynter_dir/enhance.md`
+1. **Add new validation rules** in `.claude/commands/wynter_support/validator.md`
+2. **Extend security checks** in `.claude/commands/wynter_support/security.md`
+3. **Customize enhancement logic** in `.claude/commands/wynter_support/enhance.md`
 4. **Add compliance frameworks** to security scanning
+5. **Contribute technology preferences** by submitting PRs with new options
 
 ## Best Practices
 
@@ -332,8 +442,8 @@ cat wynter-sprint.json | python -m json.tool
 **Permission errors:**
 ```bash
 # Fix file permissions
-chmod +x .claude/commands/wynter_dir/openai-tts-hook.sh
-chmod 644 .claude/commands/wynter_dir/*.md
+chmod +x .claude/commands/wynter_support/openai-tts-hook.sh
+chmod 644 .claude/commands/wynter_support/*.md
 ```
 
 ## License

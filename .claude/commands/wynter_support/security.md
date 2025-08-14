@@ -136,7 +136,9 @@ Scan against multiple security frameworks:
 
 ## Output Artifacts
 
-Generate comprehensive security documentation:
+Generate comprehensive security documentation in the `_ai/` directory:
+
+**TTS SUMMARY**: After completing the security audit, write a brief 5-word summary to `_ai/tts.txt` describing what was found (e.g., "Security scan found three issues").
 
 ### 1. `wynter-security-report.json`
 

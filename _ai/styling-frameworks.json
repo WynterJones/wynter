@@ -1,0 +1,188 @@
+{
+  "css_frameworks": [
+    {
+      "name": "Tailwind CSS",
+      "description": "Utility-first CSS framework for rapidly building custom user interfaces",
+      "use_cases": ["rapid prototyping", "custom designs", "component libraries"],
+      "approach": "utility-first",
+      "bundle_size": "small (when purged)",
+      "learning_curve": "medium",
+      "popularity": "very high"
+    },
+    {
+      "name": "Bootstrap",
+      "description": "Most popular CSS framework for developing responsive and mobile-first websites",
+      "use_cases": ["rapid development", "responsive layouts", "admin dashboards"],
+      "approach": "component-based",
+      "bundle_size": "medium",
+      "learning_curve": "easy",
+      "popularity": "very high"
+    },
+    {
+      "name": "Bulma",
+      "description": "Modern CSS framework based on Flexbox",
+      "use_cases": ["clean designs", "flexbox layouts", "responsive sites"],
+      "approach": "component-based",
+      "bundle_size": "medium",
+      "learning_curve": "easy",
+      "popularity": "medium"
+    },
+    {
+      "name": "Foundation",
+      "description": "Advanced responsive front-end framework",
+      "use_cases": ["enterprise applications", "complex layouts", "accessibility"],
+      "approach": "component-based",
+      "bundle_size": "large",
+      "learning_curve": "medium",
+      "popularity": "medium"
+    }
+  ],
+  "component_libraries": [
+    {
+      "name": "shadcn/ui",
+      "description": "Beautifully designed components built with Radix UI and Tailwind CSS",
+      "framework": "React",
+      "styling": "Tailwind CSS",
+      "use_cases": ["modern web apps", "design systems", "copy-paste components"],
+      "accessibility": "excellent",
+      "customization": "high",
+      "popularity": "very high"
+    },
+    {
+      "name": "Chakra UI",
+      "description": "Modular and accessible component library for React",
+      "framework": "React",
+      "styling": "Emotion",
+      "use_cases": ["rapid development", "accessible UIs", "theming"],
+      "accessibility": "excellent",
+      "customization": "high",
+      "popularity": "very high"
+    },
+    {
+      "name": "Material-UI (MUI)",
+      "description": "React components implementing Google's Material Design",
+      "framework": "React",
+      "styling": "Emotion/styled-components",
+      "use_cases": ["Material Design", "enterprise apps", "admin panels"],
+      "accessibility": "excellent",
+      "customization": "medium",
+      "popularity": "very high"
+    },
+    {
+      "name": "Ant Design",
+      "description": "Enterprise-class UI design language and React components",
+      "framework": "React",
+      "styling": "Less/CSS-in-JS",
+      "use_cases": ["enterprise applications", "admin dashboards", "data tables"],
+      "accessibility": "good",
+      "customization": "medium",
+      "popularity": "very high"
+    },
+    {
+      "name": "Headless UI",
+      "description": "Unstyled, fully accessible UI components",
+      "framework": "React/Vue",
+      "styling": "Bring your own",
+      "use_cases": ["custom designs", "accessibility-first", "design systems"],
+      "accessibility": "excellent",
+      "customization": "very high",
+      "popularity": "high"
+    },
+    {
+      "name": "Radix UI",
+      "description": "Low-level UI primitives with a focus on accessibility",
+      "framework": "React",
+      "styling": "Bring your own",
+      "use_cases": ["design systems", "accessibility", "custom components"],
+      "accessibility": "excellent",
+      "customization": "very high",
+      "popularity": "high"
+    },
+    {
+      "name": "Mantine",
+      "description": "Full-featured React components and hooks library",
+      "framework": "React",
+      "styling": "Emotion",
+      "use_cases": ["rapid development", "data visualization", "forms"],
+      "accessibility": "good",
+      "customization": "high",
+      "popularity": "growing"
+    }
+  ],
+  "css_in_js": [
+    {
+      "name": "styled-components",
+      "description": "CSS-in-JS library for styling React components",
+      "use_cases": ["dynamic styling", "theming", "component encapsulation"],
+      "performance": "good",
+      "bundle_size": "medium",
+      "popularity": "very high"
+    },
+    {
+      "name": "emotion",
+      "description": "Performant and flexible CSS-in-JS library",
+      "use_cases": ["performance-critical apps", "theming", "server-side rendering"],
+      "performance": "excellent",
+      "bundle_size": "small",
+      "popularity": "very high"
+    },
+    {
+      "name": "stitches",
+      "description": "CSS-in-JS with near-zero runtime",
+      "use_cases": ["performance", "design tokens", "variant-based styling"],
+      "performance": "excellent",
+      "bundle_size": "very small",
+      "popularity": "growing"
+    }
+  ],
+  "preprocessors": [
+    {
+      "name": "Sass/SCSS",
+      "description": "CSS extension language with variables, nesting, and mixins",
+      "use_cases": ["complex stylesheets", "design systems", "legacy projects"],
+      "features": ["variables", "nesting", "mixins", "functions"],
+      "popularity": "very high"
+    },
+    {
+      "name": "Less",
+      "description": "Dynamic stylesheet language that extends CSS",
+      "use_cases": ["Bootstrap customization", "dynamic theming"],
+      "features": ["variables", "nesting", "mixins", "operations"],
+      "popularity": "medium"
+    },
+    {
+      "name": "Stylus",
+      "description": "Expressive, robust, feature-rich CSS language",
+      "use_cases": ["flexible syntax", "advanced features"],
+      "features": ["flexible syntax", "built-in functions", "mixins"],
+      "popularity": "low"
+    }
+  ],
+  "specialized": [
+    {
+      "name": "DaisyUI",
+      "description": "Semantic component classes for Tailwind CSS",
+      "base": "Tailwind CSS",
+      "use_cases": ["semantic components", "themes", "rapid prototyping"],
+      "themes": "multiple built-in",
+      "customization": "high",
+      "popularity": "high"
+    },
+    {
+      "name": "Windicss",
+      "description": "Next generation utility-first CSS framework",
+      "base": "Tailwind-compatible",
+      "use_cases": ["faster builds", "utility-first", "on-demand CSS"],
+      "performance": "excellent",
+      "popularity": "medium"
+    },
+    {
+      "name": "UnoCSS",
+      "description": "Instant on-demand atomic CSS engine",
+      "base": "Utility-first",
+      "use_cases": ["performance", "custom utilities", "framework-agnostic"],
+      "performance": "excellent",
+      "popularity": "growing"
+    }
+  ]
+}

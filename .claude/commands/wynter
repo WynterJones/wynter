@@ -2,6 +2,9 @@
 # Wynter - AI-powered development framework for Claude Code
 # Inspired by Gustav but focused on PRD creation, sprint planning, security, and enhancement
 
+# Ensure _ai directory exists
+mkdir -p _ai
+
 # Check if subcommand is provided
 if [ $# -eq 0 ]; then
     echo "Wynter - AI Development Framework"
@@ -21,6 +24,8 @@ if [ $# -eq 0 ]; then
     echo "  /wynter:plan"
     echo "  /wynter:security --full"
     echo "  /wynter:enhance \"Add dark mode toggle\""
+    echo ""
+    echo "Output files are created in: _ai/"
     exit 0
 fi
 
@@ -29,22 +34,37 @@ shift
 
 case $SUBCOMMAND in
     prd)
-        claude --prompt-file=".claude/commands/wynter_dir/prd.md" "$@"
+        echo "🚀 Initializing Wynter PRD Generator..."
+        echo "📁 Output directory: _ai/"
+        echo ""
+        cat ".claude/commands/wynter_support/prd.md"
         ;;
     plan)
-        claude --prompt-file=".claude/commands/wynter_dir/planner.md" "$@"
+        echo "📊 Initializing Wynter Sprint Planner..."
+        echo "📁 Output directory: _ai/"
+        echo ""
+        cat ".claude/commands/wynter_support/planner.md"
         ;;
     security)
-        claude --prompt-file=".claude/commands/wynter_dir/security.md" "$@"
+        echo "🔒 Initializing Wynter Security Auditor..."
+        echo "📁 Output directory: _ai/"
+        echo ""
+        cat ".claude/commands/wynter_support/security.md"
         ;;
     check)
-        claude --prompt-file=".claude/commands/wynter_dir/validator.md" "$@"
+        echo "✅ Initializing Wynter Validator & Double-Checker..."
+        echo "📁 Output directory: _ai/"
+        echo ""
+        cat ".claude/commands/wynter_support/validator.md"
         ;;
     enhance)
-        claude --prompt-file=".claude/commands/wynter_dir/enhance.md" "$@"
+        echo "🔧 Initializing Wynter Feature Enhancer..."
+        echo "📁 Output directory: _ai/"
+        echo ""
+        cat ".claude/commands/wynter_support/enhance.md"
         ;;
     help)
-        claude --prompt-file=".claude/commands/wynter_dir/help.md" "$@"
+        cat ".claude/commands/wynter_support/help.md"
         ;;
     *)
         echo "Unknown command: $SUBCOMMAND"

@@ -1,0 +1,192 @@
+{
+  "layout_patterns": [
+    {
+      "name": "Header + Sidebar + Main",
+      "description": "Classic admin dashboard layout with fixed header and collapsible sidebar",
+      "use_cases": ["admin panels", "dashboards", "content management"],
+      "complexity": "medium",
+      "responsive": true
+    },
+    {
+      "name": "Full-width Header + Main",
+      "description": "Simple layout with full-width header and main content area",
+      "use_cases": ["marketing sites", "blogs", "documentation"],
+      "complexity": "low",
+      "responsive": true
+    },
+    {
+      "name": "Centered Container",
+      "description": "Content constrained to centered container with max-width",
+      "use_cases": ["blogs", "articles", "simple apps"],
+      "complexity": "low",
+      "responsive": true
+    },
+    {
+      "name": "Split Screen",
+      "description": "Two-column layout splitting the screen vertically",
+      "use_cases": ["landing pages", "feature showcases", "comparisons"],
+      "complexity": "medium",
+      "responsive": true
+    }
+  ],
+  "navigation_patterns": [
+    {
+      "name": "Top Navigation Bar",
+      "description": "Horizontal navigation bar at the top of the page",
+      "use_cases": ["marketing sites", "web apps", "e-commerce"],
+      "mobile_friendly": true,
+      "complexity": "low"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "description": "Vertical navigation sidebar, often collapsible",
+      "use_cases": ["admin panels", "dashboards", "complex apps"],
+      "mobile_friendly": false,
+      "complexity": "medium"
+    },
+    {
+      "name": "Tab Navigation",
+      "description": "Horizontal tabs for section switching",
+      "use_cases": ["settings pages", "profiles", "multi-step forms"],
+      "mobile_friendly": true,
+      "complexity": "low"
+    },
+    {
+      "name": "Breadcrumb Navigation",
+      "description": "Hierarchical navigation showing current page location",
+      "use_cases": ["e-commerce", "documentation", "file systems"],
+      "mobile_friendly": true,
+      "complexity": "low"
+    },
+    {
+      "name": "Bottom Navigation",
+      "description": "Tab bar navigation at bottom of screen",
+      "use_cases": ["mobile apps", "PWAs", "touch interfaces"],
+      "mobile_friendly": true,
+      "complexity": "low"
+    }
+  ],
+  "component_patterns": [
+    {
+      "name": "Card-based Layout",
+      "description": "Content organized in card components",
+      "use_cases": ["dashboards", "product listings", "social feeds"],
+      "accessibility": "good",
+      "reusability": "high"
+    },
+    {
+      "name": "Data Tables",
+      "description": "Structured data display with sorting, filtering, pagination",
+      "use_cases": ["admin panels", "analytics", "user management"],
+      "accessibility": "medium",
+      "reusability": "high"
+    },
+    {
+      "name": "Modal/Dialog System",
+      "description": "Overlay components for focused interactions",
+      "use_cases": ["forms", "confirmations", "detailed views"],
+      "accessibility": "medium",
+      "reusability": "high"
+    },
+    {
+      "name": "Toast Notifications",
+      "description": "Non-intrusive notification system",
+      "use_cases": ["feedback", "alerts", "status updates"],
+      "accessibility": "good",
+      "reusability": "high"
+    },
+    {
+      "name": "Form Layouts",
+      "description": "Structured form components with validation",
+      "use_cases": ["user input", "settings", "data entry"],
+      "accessibility": "high",
+      "reusability": "high"
+    }
+  ],
+  "interaction_patterns": [
+    {
+      "name": "Infinite Scroll",
+      "description": "Continuous content loading as user scrolls",
+      "use_cases": ["social feeds", "search results", "image galleries"],
+      "performance_impact": "medium",
+      "user_experience": "good"
+    },
+    {
+      "name": "Pagination",
+      "description": "Content split into discrete pages",
+      "use_cases": ["search results", "articles", "data tables"],
+      "performance_impact": "low",
+      "user_experience": "good"
+    },
+    {
+      "name": "Drag and Drop",
+      "description": "Interactive element repositioning",
+      "use_cases": ["file uploads", "task management", "customization"],
+      "performance_impact": "medium",
+      "user_experience": "excellent"
+    },
+    {
+      "name": "Search with Autocomplete",
+      "description": "Real-time search suggestions",
+      "use_cases": ["navigation", "data entry", "content discovery"],
+      "performance_impact": "medium",
+      "user_experience": "excellent"
+    },
+    {
+      "name": "Progressive Disclosure",
+      "description": "Revealing information progressively",
+      "use_cases": ["complex forms", "settings", "feature discovery"],
+      "performance_impact": "low",
+      "user_experience": "good"
+    }
+  ],
+  "responsive_patterns": [
+    {
+      "name": "Mobile-First Design",
+      "description": "Design starting from mobile constraints",
+      "approach": "progressive enhancement",
+      "breakpoints": ["mobile", "tablet", "desktop"],
+      "best_for": "content-heavy sites"
+    },
+    {
+      "name": "Desktop-First Design",
+      "description": "Design starting from desktop and scaling down",
+      "approach": "graceful degradation",
+      "breakpoints": ["desktop", "tablet", "mobile"],
+      "best_for": "complex applications"
+    },
+    {
+      "name": "Container Queries",
+      "description": "Responsive design based on container size",
+      "approach": "component-based responsiveness",
+      "support": "modern browsers",
+      "best_for": "reusable components"
+    }
+  ],
+  "accessibility_patterns": [
+    {
+      "name": "Keyboard Navigation",
+      "description": "Full keyboard accessibility support",
+      "requirements": ["tab order", "focus indicators", "shortcuts"],
+      "importance": "critical"
+    },
+    {
+      "name": "Screen Reader Support",
+      "description": "Semantic HTML and ARIA attributes",
+      "requirements": ["proper headings", "alt text", "aria labels"],
+      "importance": "critical"
+    },
+    {
+      "name": "Color Contrast",
+      "description": "Sufficient color contrast for readability",
+      "requirements": ["WCAG AA compliance", "4.5:1 ratio", "color independence"],
+      "importance": "high"
+    },
+    {
+      "name": "Focus Management",
+      "description": "Proper focus handling in dynamic interfaces",
+      "requirements": ["focus trapping", "focus restoration", "skip links"],
+      "importance": "high"
+    }
+  ]
+}

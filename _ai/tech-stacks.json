@@ -1,0 +1,108 @@
+{
+  "backend_frameworks": [
+    {
+      "name": "Ruby on Rails",
+      "description": "Full-stack web framework for Ruby",
+      "use_cases": ["web applications", "APIs", "rapid prototyping"],
+      "learning_curve": "medium",
+      "community": "large"
+    },
+    {
+      "name": "Node.js + Express",
+      "description": "JavaScript runtime with Express framework",
+      "use_cases": ["APIs", "real-time applications", "microservices"],
+      "learning_curve": "easy",
+      "community": "very large"
+    },
+    {
+      "name": "Django",
+      "description": "Python web framework",
+      "use_cases": ["web applications", "APIs", "data-heavy applications"],
+      "learning_curve": "medium",
+      "community": "large"
+    },
+    {
+      "name": "Laravel",
+      "description": "PHP web framework",
+      "use_cases": ["web applications", "APIs", "enterprise applications"],
+      "learning_curve": "easy",
+      "community": "large"
+    },
+    {
+      "name": "ASP.NET Core",
+      "description": "Microsoft's cross-platform web framework",
+      "use_cases": ["enterprise applications", "APIs", "high-performance apps"],
+      "learning_curve": "medium",
+      "community": "large"
+    }
+  ],
+  "frontend_frameworks": [
+    {
+      "name": "Next.js",
+      "description": "React framework with SSR/SSG capabilities",
+      "use_cases": ["web applications", "static sites", "e-commerce"],
+      "learning_curve": "medium",
+      "community": "very large"
+    },
+    {
+      "name": "React",
+      "description": "JavaScript library for building user interfaces",
+      "use_cases": ["web applications", "SPAs", "mobile apps"],
+      "learning_curve": "medium",
+      "community": "very large"
+    },
+    {
+      "name": "Vue.js",
+      "description": "Progressive JavaScript framework",
+      "use_cases": ["web applications", "SPAs", "progressive enhancement"],
+      "learning_curve": "easy",
+      "community": "large"
+    },
+    {
+      "name": "Svelte/SvelteKit",
+      "description": "Compile-time framework with no virtual DOM",
+      "use_cases": ["web applications", "high-performance apps"],
+      "learning_curve": "easy",
+      "community": "growing"
+    },
+    {
+      "name": "Angular",
+      "description": "TypeScript-based web application framework",
+      "use_cases": ["enterprise applications", "large-scale SPAs"],
+      "learning_curve": "hard",
+      "community": "large"
+    }
+  ],
+  "databases": [
+    {
+      "name": "PostgreSQL",
+      "description": "Advanced open-source relational database",
+      "use_cases": ["web applications", "analytics", "complex queries"],
+      "type": "relational"
+    },
+    {
+      "name": "MySQL",
+      "description": "Popular open-source relational database",
+      "use_cases": ["web applications", "e-commerce", "content management"],
+      "type": "relational"
+    },
+    {
+      "name": "MongoDB",
+      "description": "Document-based NoSQL database",
+      "use_cases": ["flexible schemas", "real-time applications", "content management"],
+      "type": "document"
+    },
+    {
+      "name": "Redis",
+      "description": "In-memory data structure store",
+      "use_cases": ["caching", "session storage", "real-time analytics"],
+      "type": "key-value"
+    },
+    {
+      "name": "SQLite",
+      "description": "Lightweight file-based SQL database",
+      "use_cases": ["prototyping", "small applications", "embedded systems"],
+      "type": "relational"
+    }
+  ]
+}
