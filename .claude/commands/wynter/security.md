@@ -211,7 +211,6 @@ Detailed remediation guide with:
 - Technical implementation details
 - Code examples and configuration changes
 - Testing and validation procedures
-- Timeline recommendations for fixes
 
 ### 3. `wynter-security-checklist.md`
 

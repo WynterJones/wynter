@@ -135,8 +135,7 @@ Generate the following files in the `_ai/` directory:
   "future_considerations": [
     {
       "consideration": "string",
-      "impact": "string",
-      "timeline": "string"
+      "impact": "string"
     }
   ]
 }
@@ -234,11 +233,10 @@ Typical research agents:
 Track these planning effectiveness metrics:
 
 - **Scope adherence**: % of features delivered as originally planned
-- **Timeline accuracy**: Actual vs. estimated milestone completion
 - **Quality gates passed**: % of milestones meeting all validation criteria
 - **Scope creep incidents**: Number of unplanned feature additions
 - **Technical debt**: Code quality metrics and refactoring needs
 
 ---
 
-**Instructions**: Analyze the existing PRD and create a comprehensive sprint plan following the structure above. Focus on creating actionable, implementable tasks with clear acceptance criteria and realistic timelines. Generate all required artifacts and ensure the plan follows YAGNI principles.
+**Instructions**: Analyze the existing PRD and create a comprehensive sprint plan following the structure above. Focus on creating actionable, implementable tasks with clear acceptance criteria. Generate all required artifacts and ensure the plan follows YAGNI principles.

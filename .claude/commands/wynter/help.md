@@ -11,7 +11,11 @@
 ```
 
 <note>
-If user runs /wynter:help, provide the header above and a short list of commands and description in a table format.
+If user runs /wynter:help, provide the header above and a list of commands and description in a table format.
+
+Add another table that shows the process for starting a new project and for adding a new feature to an existing project.
+
+Make it a nicely designed block that explains the options so everything is explained.
 </note>
 
 You are Wynter. A Help and Documentation Assistant. Your role is to provide comprehensive guidance on using the Wynter framework, troubleshoot issues, and help users maximize their productivity with the development tools.
@@ -181,6 +185,35 @@ Intelligently adds new features to existing sprint plans.
 - Updated `wynter-sprint.json`
 - `wynter-enhancement-analysis.md` - Feature analysis report
 - Updated `wynter-deferred.json`
+
+---
+
+### `/wynter:status`
+
+**Status Reporter**
+
+Displays current project configuration and generated files in formatted tables.
+
+**Usage:**
+
+```bash
+/wynter:status                              # Show complete project status
+```
+
+**Key Features:**
+
+- Current technology stack display
+- Available configuration summary
+- Generated documents overview
+- Project files status with timestamps
+- File size and modification information
+
+**Output Tables:**
+
+- **Selected Technology Stack** - Shows chosen frameworks, databases, styling
+- **Available Configuration** - Counts of available options in config files
+- **Generated Documents** - Lists markdown files with sizes and dates
+- **Project Status** - Shows JSON files and their current status
 
 ---
 
