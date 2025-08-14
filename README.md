@@ -95,6 +95,8 @@ chmod +x .claude/commands/wynter/wynter.sh
 chmod +x .claude/commands/wynter/wynter-stop-hook.sh
 ```
 
+4. Copy `_ai/` directory to your project directory.
+
 ### Basic Usage
 
 1. **Generate a PRD:**
