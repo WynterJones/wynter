@@ -1,8 +1,8 @@
 <img src="/tmp/screenshot.png" width="700"/>
 
-An AI-powered development framework for Claude Code that transforms ideas into enterprise-grade applications while preventing common development pitfalls.
+An AI-powered development framework for Claude Code that transforms ideas into applications while following my own development process after 20+ years of building software.
 
-**Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav) but designed specifically for comprehensive project lifecycle management with enhanced security, validation, and intelligent feature enhancement capabilities.
+> **Wynter** is inspired by [Gustav](https://github.com/dimitritholen/gustav) -- _perhaps building your own framework ontop of an agent is the future?_
 
 ## Core Philosophy
 
