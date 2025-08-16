@@ -19,7 +19,6 @@ A flow framework for **Claude Code**. Designed after 20+ years of building softw
   - [/wynter:check](#wyntercheck-mode)
   - [/wynter:enhance](#wynterenhance-feature-description)
   - [/wynter:status](#wynterstatus)
-- [TTS Notifications Setup](#tts-notifications-setup)
 - [File Structure](#file-structure)
   - [The \_ai Directory](#the-_ai-directory)
   - [Project Documents](#project-documents)
@@ -98,7 +97,6 @@ Intelligent feature integration with:
 ### Prerequisites
 
 - [Claude Code](https://claude.ai/code) installed and configured
-- OpenAI API key (for TTS notifications)
 - Git repository initialized
 
 ### Installation
@@ -223,23 +221,6 @@ Displays: Technology stack, generated documents, project file status
 
 <img src="/tmp/status.png" width="700"/>
 
-## TTS Notifications Setup
-
-Wynter provides spoken notifications when commands complete.
-
-**Setup:**
-
-1. Set OpenAI API key: `export OPENAI_API_KEY="your-key"`
-2. The `.claude/settings.json` file handles the rest automatically
-
-**How it works:**
-
-- Each command writes a summary to `_ai/tts.txt`
-- The stop hook reads this file and speaks it
-- Examples: "PRD completed", "Security scan found 3 issues"
-- Uses OpenAI TTS-1 with "alloy" voice
-- Works on macOS and Linux
-
 ## File Structure
 
 ### The \_ai Directory
@@ -257,7 +238,6 @@ Wynter uses the `_ai/` directory to store configuration files, generated documen
 **Generated Files (Wynter Creates These):**
 
 - `selected-*.json` - Your chosen technologies from PRD generation
-- `tts.txt` - Current TTS notification message
 - Various output files from commands (see sections below)
 
 The configuration files let you customize what technologies Wynter suggests during PRD generation. The generated files store your selections and command outputs.
