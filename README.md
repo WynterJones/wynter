@@ -13,7 +13,7 @@ A flow framework for **Claude Code**. Designed after 20+ years of building softw
   - [Installation](#installation)
   - [Basic Usage](#basic-usage)
 - [Command Reference](#command-reference)
-  - [/wynter:prd](#wynterprd-project-description)
+  - [/wynter:start](#wynterprd-project-description)
   - [/wynter:plan](#wynterplan-options)
   - [/wynter:security](#wyntersecurity-mode)
   - [/wynter:check](#wyntercheck-mode)
@@ -44,7 +44,7 @@ A flow framework for **Claude Code**. Designed after 20+ years of building softw
 
 ## Key Features
 
-### PRD Generator (`/wynter:prd`)
+### PRD Generator (`/wynter:start`)
 
 Transform high-level ideas into comprehensive Product Requirements Documents with:
 
@@ -117,7 +117,7 @@ Intelligent feature integration with:
 1. **Generate a PRD:**
 
 ```bash
-/wynter:prd "Build a task management app for remote teams"
+/wynter:start "Build a task management app for remote teams"
 ```
 
 2. **Create flow plan:**
@@ -146,14 +146,14 @@ Intelligent feature integration with:
 
 ## Command Reference
 
-### `/wynter:prd "project description"`
+### `/wynter:start "project description"`
 
 Generate comprehensive Product Requirements Document
 
 ```bash
-/wynter:prd "E-commerce platform with AI recommendations"
-/wynter:prd "Real-time collaboration whiteboard tool"
-/wynter:prd "Healthcare patient management system"
+/wynter:start "E-commerce platform with AI recommendations"
+/wynter:start "Real-time collaboration whiteboard tool"
+/wynter:start "Healthcare patient management system"
 ```
 
 Creates: `prd.md`, market analysis, tech recommendations
@@ -292,7 +292,7 @@ The configuration files let you customize what technologies Wynter suggests duri
 
 ### New Project Workflow
 
-1. **Generate PRD**: `/wynter:prd "project description"`
+1. **Generate PRD**: `/wynter:start "project description"`
 2. **Create Flow Plan**: `/wynter:plan`
 3. **Implement Features**: Follow flow plan tasks
 4. **Validate Progress**: `/wynter:check --feature <name>`

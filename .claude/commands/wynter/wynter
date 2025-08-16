@@ -12,7 +12,7 @@ if [ $# -eq 0 ]; then
     echo "Usage: /wynter:<command> [options]"
     echo ""
     echo "Commands:"
-    echo "  prd         Generate Product Requirements Document"
+    echo "  start         Generate Product Requirements Document"
     echo "  plan        Create sprint plan from PRD"
     echo "  security    Run comprehensive security audit"
     echo "  check       Double-check and validate implementation"
@@ -21,7 +21,7 @@ if [ $# -eq 0 ]; then
     echo "  help        Show detailed help"
     echo ""
     echo "Examples:"
-    echo "  /wynter:prd \"Build a task management app\""
+    echo "  /wynter:start \"Build a task management app\""
     echo "  /wynter:plan"
     echo "  /wynter:security --full"
     echo "  /wynter:enhance \"Add dark mode toggle\""
@@ -35,8 +35,8 @@ SUBCOMMAND=$1
 shift
 
 case $SUBCOMMAND in
-    prd)
-        echo "🚀 Initializing Wynter PRD Generator..."
+    start)
+        echo "🚀 Initializing Wynter Product Requirements Document (PRD) Generator..."
         echo "📁 Output directory: _ai/"
         echo ""
         cat ".claude/commands/wynter/prd.md"

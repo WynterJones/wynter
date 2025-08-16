@@ -78,7 +78,7 @@ If no selected technology files exist, show:
 │                    SELECTED TECHNOLOGY STACK                │
 ├─────────────────┬───────────────────────────────────────────┤
 │ Status          │ No technologies selected yet              │
-│ Action          │ Run /wynter:prd to select technologies    │
+│ Action          │ Run /wynter:start to select technologies    │
 └─────────────────┴───────────────────────────────────────────┘
 ```
 
@@ -86,7 +86,7 @@ If \_ai directory doesn't exist, create it and show setup message.
 
 ## Technical Implementation
 
-1. **Create _ai directory if it doesn't exist** using `mkdir -p _ai`
+1. **Create \_ai directory if it doesn't exist** using `mkdir -p _ai`
 2. Use file system commands to check for file existence
 3. Parse JSON files to extract relevant information
 4. Use Unicode box drawing characters for tables
@@ -98,10 +98,11 @@ If \_ai directory doesn't exist, create it and show setup message.
 
 **IMPORTANT**: Only create TTS notification if the analysis completes successfully.
 
-1. **Ensure _ai directory exists**: Create it if needed
+1. **Ensure \_ai directory exists**: Create it if needed
 2. **Write brief summary to `_ai/tts.txt`** (only if no errors occurred):
+
    - If files exist: "Status shows [X] selected technologies"
-   - If no selections: "No tech stack selected yet"  
+   - If no selections: "No tech stack selected yet"
    - If errors: "Status check completed with issues"
 
 3. **Handle write failures gracefully**: If writing to `_ai/tts.txt` fails, continue without TTS notification

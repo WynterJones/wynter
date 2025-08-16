@@ -1,4 +1,4 @@
-# Usage: /wynter:prd
+# Usage: /wynter:start
 
 **OUTPUT THE FOLLOWING HEADER FOR THE USER**:
 
