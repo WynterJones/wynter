@@ -92,22 +92,6 @@ If \_ai directory doesn't exist, create it and show setup message.
 4. Use Unicode box drawing characters for tables
 5. Calculate file sizes and modification times
 6. Provide helpful messages for missing files
-7. **Handle TTS file creation with error checking**
-
-## TTS Notification
-
-**IMPORTANT**: Only create TTS notification if the analysis completes successfully.
-
-1. **Ensure \_ai directory exists**: Create it if needed
-2. **Write brief summary to `_ai/tts.txt`** (only if no errors occurred):
-
-   - If files exist: "Status shows [X] selected technologies"
-   - If no selections: "No tech stack selected yet"
-   - If errors: "Status check completed with issues"
-
-3. **Handle write failures gracefully**: If writing to `_ai/tts.txt` fails, continue without TTS notification
-
-**Note**: The TTS system will automatically skip if OpenAI API key is not set.
 
 ## Success Criteria
 

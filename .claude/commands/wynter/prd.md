@@ -181,8 +181,6 @@ Generate the PRD as a well-structured markdown document saved to `_ai/prd.md` wi
 
 **IMPORTANT**: Always save the PRD to `_ai/prd.md` in the project root directory.
 
-**TTS SUMMARY**: After completing the PRD, write a brief 5-word summary to `_ai/tts.txt` describing what was accomplished (e.g., "PRD for task app completed").
-
 ## Quality Assurance
 
 Before finalizing the PRD:

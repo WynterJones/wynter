@@ -148,12 +148,6 @@ Provide systematic validation that prevents bugs, ensures requirements complianc
 - [ ] Navigation is intuitive
 - [ ] Browser compatibility verified
 
-## Validation Output Artifacts
-
-Generate all validation files in the `_ai/` directory:
-
-**TTS SUMMARY**: After completing the validation, write a brief 5-word summary to `_ai/tts.txt` describing the results (e.g., "Validation passed with minor warnings").
-
 ### 1. `_ai/wynter-validation-report.json`
 
 ```json

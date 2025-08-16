@@ -12,7 +12,7 @@ if [ $# -eq 0 ]; then
     echo "Usage: /wynter:<command> [options]"
     echo ""
     echo "Commands:"
-    echo "  start         Generate Product Requirements Document"
+    echo "  start       Generate Product Requirements Document"
     echo "  plan        Create sprint plan from PRD"
     echo "  security    Run comprehensive security audit"
     echo "  check       Double-check and validate implementation"

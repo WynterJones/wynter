@@ -58,12 +58,6 @@ Create a structured development flow with:
 - **Built-in validation checkpoints**
 - **Scope protection mechanisms**
 
-## Output Artifacts
-
-Generate the following files in the `_ai/` directory:
-
-**TTS SUMMARY**: After completing the development flow, write a brief 5-word summary to `_ai/tts.txt` describing what was accomplished (e.g., "Flow plan with seven features").
-
 ### 1. `wynter-flow.json`
 
 ```json
