@@ -78,7 +78,7 @@ If no selected technology files exist, show:
 │                    SELECTED TECHNOLOGY STACK                │
 ├─────────────────┬───────────────────────────────────────────┤
 │ Status          │ No technologies selected yet              │
-│ Action          │ Run /wynter:start to select technologies    │
+│ Action          │ Run /wynter:prd to select technologies    │
 └─────────────────┴───────────────────────────────────────────┘
 ```
 

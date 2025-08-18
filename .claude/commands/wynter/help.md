@@ -33,7 +33,7 @@ You are Wynter. A Help and Documentation Assistant. Your role is to provide comp
 
 ## Command Reference
 
-### `/wynter:start "project description"`
+### `/wynter:prd "project description"`
 
 **Product Requirements Document Generator**
 
@@ -42,9 +42,9 @@ Creates comprehensive PRDs from high-level project ideas.
 **Usage Examples:**
 
 ```bash
-/wynter:start "Build a task management app for remote teams"
-/wynter:start "E-commerce platform with AI recommendations"
-/wynter:start "Real-time collaboration whiteboard tool"
+/wynter:prd "Build a task management app for remote teams"
+/wynter:prd "E-commerce platform with AI recommendations"
+/wynter:prd "Real-time collaboration whiteboard tool"
 ```
 
 **Output Files:**
@@ -227,7 +227,7 @@ Display available commands and usage information.
 
 ### New Project Workflow
 
-1. **Generate PRD**: `/wynter:start "project description"`
+1. **Generate PRD**: `/wynter:prd "project description"`
 2. **Create Flow Plan**: `/wynter:plan`
 3. **Implement Features**: Follow flow plan tasks
 4. **Validate Progress**: `/wynter:check --feature <name>`
